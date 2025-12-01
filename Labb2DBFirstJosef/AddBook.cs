@@ -49,6 +49,7 @@ namespace Labb2DBFirstJosef
 
             Console.Write("Ange Pris för boken (t.ex 10,99): "); 
             decimal price = Convert.ToDecimal(Console.ReadLine());
+            
 
             Console.Write("Ange Utgivningsdatum för boken (ÅÅÅÅ-MM-DD): ");
             DateOnly publishDate = DateOnly.Parse(Console.ReadLine());

@@ -17,8 +17,16 @@ namespace Labb2DBFirstJosef
 
             
 
+
             var saldoFörButik = lagerSaldo.Where(ls => ls.ButikId == butikId).ToList();
             Console.WriteLine($"Lagersaldo för butik ID {butikId}:");
+            foreach (var saldo in saldoFörButik)
+            {
+                Console.WriteLine($"Bok ISBN-13: {saldo.Isbn13}, Antal i lager: {saldo.Antal}");
+            }
+            Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
+            Console.ReadKey();
+
 
         }
     }
