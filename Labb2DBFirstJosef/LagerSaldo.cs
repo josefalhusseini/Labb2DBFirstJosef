@@ -10,8 +10,16 @@ namespace Labb2DBFirstJosef
     {
         public static void ShowLagerSaldo()
         {
-            Console.WriteLine("Lagersaldo för alla böcker:");
-            Console.ReadLine();
+            using var db = new Models.BokhandelContext();
+            var lagerSaldo = db.LagerSaldos.ToList();
+            Console.Write("Ange butikens ID för att visa lagersaldo: ");
+            int butikId = Convert.ToInt32(Console.ReadLine());
+
+            
+
+            var saldoFörButik = lagerSaldo.Where(ls => ls.ButikId == butikId).ToList();
+            Console.WriteLine($"Lagersaldo för butik ID {butikId}:");
+
         }
     }
 }
