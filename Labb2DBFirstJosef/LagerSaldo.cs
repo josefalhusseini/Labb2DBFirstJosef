@@ -15,7 +15,8 @@ namespace Labb2DBFirstJosef
             Console.Write("Ange butikens ID för att visa lagersaldo: ");
             int butikId = Convert.ToInt32(Console.ReadLine());
 
-            
+
+
 
 
             var saldoFörButik = lagerSaldo.Where(ls => ls.ButikId == butikId).ToList();
